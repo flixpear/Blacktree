@@ -304,10 +304,118 @@
             opacity: 0.7;
         }
 
+        /* Petition Table */
+        .petition-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .petition-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .petition-table th {
+            background: rgba(76, 175, 80, 0.2);
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-weight: bold;
+        }
+
+        .petition-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .petition-table tr:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .signature-count {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .resources-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resources h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .resource-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+
+        .resource-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .resource-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .resource-link {
+            display: inline-block;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .resource-link:hover {
+            opacity: 0.7;
+            border-bottom-color: #4CAF50;
+        }
+
         /* FAQ Section */
         .faq {
             padding: 4rem 2rem;
-            background: #f5f5f5;
+            background: white;
         }
 
         .faq-container {
@@ -323,7 +431,7 @@
         }
 
         .faq-item {
-            background: white;
+            background: #f5f5f5;
             margin-bottom: 1rem;
             border-radius: 8px;
             overflow: hidden;
@@ -362,6 +470,16 @@
 
         .faq-item.active .faq-toggle {
             transform: rotate(180deg);
+        }
+
+        .learn-more-link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .learn-more-link:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -409,6 +527,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
             nav ul {
                 gap: 1rem;
                 font-size: 0.9rem;
@@ -420,6 +542,15 @@
 
             .btn {
                 width: 100%;
+            }
+
+            .petition-table table {
+                font-size: 0.8rem;
+            }
+
+            .petition-table th,
+            .petition-table td {
+                padding: 0.5rem;
             }
         }
     </style>
@@ -433,6 +564,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#tracks">Get Involved</a></li>
                 <li><a href="#action">Take Action</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
@@ -559,16 +691,29 @@
                     <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Congressional offices respond to documented constituent requests.</p>
                 </div>
 
-                <!-- Sign Petition -->
+                <!-- Petitions -->
                 <div class="action-card">
-                    <h3>✍️ Start or Sign a Petition</h3>
-                    <p><strong>Demand Federal Review</strong></p>
-                    <p>Add your voice to the growing movement for accountability.</p>
-                    <div style="margin-bottom: 1rem;">
-                        <a href="https://www.change.org/start" class="action-link" target="_blank">Create on Change.org →</a><br>
-                        <a href="https://sign.moveon.org/" class="action-link" target="_blank" style="font-size: 0.9rem;">MoveOn.org Petition →</a>
+                    <h3>✍️ Community Petitions</h3>
+                    <p><strong>Unified Petition Power</strong></p>
+                    <p>View and sign the strongest community petitions or create your own.</p>
+                    <a href="https://github.com/flixpear/Blacktree/blob/main/PETITIONS_DATABASE.md" class="action-link" target="_blank">View Top Petitions →</a>
+                    <div class="petition-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Petition</th>
+                                    <th style="text-align: right;">Signatures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Coming soon...</td>
+                                    <td style="text-align: right; color: #4CAF50;">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Every signature strengthens the call for federal investigation.</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Submit your petition link to consolidate signatures and amplify impact.</p>
                 </div>
 
                 <!-- Volunteer -->
@@ -576,8 +721,8 @@
                     <h3>🤝 Become a Researcher</h3>
                     <p><strong>Help Build the Case</strong></p>
                     <p>Research cases, gather public records, support documentation.</p>
-                    <a href="mailto:contact@blacktreecampaign.org?subject=I%20Want%20to%20Help%20as%20a%20Researcher" class="action-link">Join Our Team →</a>
-                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Email us to learn about current research opportunities and training.</p>
+                    <a href="https://github.com/flixpear/Blacktree/issues/new" class="action-link" target="_blank">Get Involved →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Create a GitHub issue to express interest or submit findings.</p>
                 </div>
 
                 <!-- Civil Rights -->
@@ -596,6 +741,80 @@
         </div>
     </section>
 
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="resources-container">
+            <h2>📚 Campaign Resources</h2>
+            <div class="resources-grid">
+                <!-- Full Campaign Strategy -->
+                <div class="resource-card">
+                    <h3>📖 Full Campaign Strategy</h3>
+                    <p>Complete 15-phase breakdown of the Blacktree Campaign, from evidence collection to federal referrals and congressional action.</p>
+                    <div class="resource-links">
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md" class="resource-link" target="_blank">Read Full Campaign Plan →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-1--build-the-case-file" class="resource-link" target="_blank">Phase 1: Build Case File →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-15--the-first-30-days" class="resource-link" target="_blank">Phase 15: First 30 Days →</a>
+                    </div>
+                </div>
+
+                <!-- FBI & DOJ Investigation Guides -->
+                <div class="resource-card">
+                    <h3>🔴🟦 Federal Agencies</h3>
+                    <p>Learn how the FBI and DOJ investigate hate crimes, civil-rights violations, and conduct pattern-or-practice investigations.</p>
+                    <div class="resource-links">
+                        <a href="https://www.fbi.gov/investigate/civil-rights/hate-crimes" class="resource-link" target="_blank">FBI Hate Crimes →</a>
+                        <a href="https://www.justice.gov/crt" class="resource-link" target="_blank">DOJ Civil Rights Division →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-4--federal-reporting" class="resource-link" target="_blank">How to Report (Full Guide) →</a>
+                    </div>
+                </div>
+
+                <!-- Community Petitions Database -->
+                <div class="resource-card">
+                    <h3>✍️ Petitions Database</h3>
+                    <p>Live, community-moderated database of petitions demanding federal review. Submit your own petition or amplify the strongest ones.</p>
+                    <div class="resource-links">
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/PETITIONS_DATABASE.md" class="resource-link" target="_blank">View All Petitions →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/PETITIONS_DATABASE.md#how-to-add-your-petition" class="resource-link" target="_blank">Submit Your Petition →</a>
+                        <a href="https://www.change.org/start" class="resource-link" target="_blank">Create on Change.org →</a>
+                    </div>
+                </div>
+
+                <!-- Evidence & Documentation -->
+                <div class="resource-card">
+                    <h3>📋 Evidence & Documentation</h3>
+                    <p>Learn what evidence matters, how to document cases, FOIA request procedures, and family interview protocols.</p>
+                    <div class="resource-links">
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-1--build-the-case-file" class="resource-link" target="_blank">Case File Structure →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-2--create-an-evidence-rating" class="resource-link" target="_blank">Evidence Rating System →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-7--public-records--foia" class="resource-link" target="_blank">FOIA Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Congressional Action -->
+                <div class="resource-card">
+                    <h3>📞 Congressional Campaign</h3>
+                    <p>How to contact Congress, what to demand, template letters, and strategy for leveraging legislative pressure.</p>
+                    <div class="resource-links">
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-9--congressional-campaign" class="resource-link" target="_blank">Congressional Strategy →</a>
+                        <a href="https://www.house.gov/representatives/find-your-representative" class="resource-link" target="_blank">Find Your Representative →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#the-campaign-flywheel" class="resource-link" target="_blank">Campaign Flywheel →</a>
+                    </div>
+                </div>
+
+                <!-- Social Media & Media Strategy -->
+                <div class="resource-card">
+                    <h3>📱 Social Media & Outreach</h3>
+                    <p>Ready-to-use social media posts, messaging strategy, media engagement plans, and campaign narratives.</p>
+                    <div class="resource-links">
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/SOCIAL_MEDIA_POSTS.md" class="resource-link" target="_blank">Social Media Posts →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-11--media-strategy" class="resource-link" target="_blank">Media Strategy →</a>
+                        <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-13--the-campaigns-legal-language" class="resource-link" target="_blank">Legal Language Guide →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="faq-container">
@@ -607,7 +826,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>The Blacktree Campaign is a citizen-led effort demanding independent federal review of suspicious and disputed deaths involving Black Americans. We work with families, federal agencies, civil-rights organizations, and Congress to ensure thorough investigation of cases where credible questions exist about official determinations.</p>
+                    <p>The Blacktree Campaign is a citizen-led effort demanding independent federal review of suspicious and disputed deaths involving Black Americans. We work with families, federal agencies, civil-rights organizations, and Congress to ensure thorough investigation of cases where credible questions exist about official determinations. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md" class="learn-more-link" target="_blank">Read the full campaign plan →</a></p>
                 </div>
             </div>
 
@@ -617,7 +836,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>No. We're not asking you to determine legal classifications. We're simply asking: "Does this case deserve federal review?" If you see a suspicious death involving a Black American, report the facts to the FBI and DOJ. Federal investigators will determine whether civil-rights violations, hate crimes, or other federal crimes occurred.</p>
+                    <p>No. We're not asking you to determine legal classifications. We're simply asking: "Does this case deserve federal review?" If you see a suspicious death involving a Black American, report the facts to the FBI and DOJ. Federal investigators will determine whether civil-rights violations, hate crimes, or other federal crimes occurred. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-4--federal-reporting" class="learn-more-link" target="_blank">Learn more about reporting →</a></p>
                 </div>
             </div>
 
@@ -627,7 +846,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>10–30 minutes. You gather the basic facts about the case, file a report with the FBI tip line, and file a report with the DOJ Civil Rights Division. That's it. You don't need to do additional research or investigation.</p>
+                    <p>10–30 minutes. You gather the basic facts about the case, file a report with the FBI tip line, and file a report with the DOJ Civil Rights Division. That's it. You don't need to do additional research or investigation. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#conclusion" class="learn-more-link" target="_blank">See the two-track approach →</a></p>
                 </div>
             </div>
 
@@ -637,7 +856,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Join the Investigative Track. You can help research cases, gather public records through FOIA requests, conduct family interviews, and build the evidence base. We provide training and support for volunteers. You can contribute as much or as little time as you have available.</p>
+                    <p>Join the Investigative Track. You can help research cases, gather public records through FOIA requests, conduct family interviews, and build the evidence base. We provide training and support for volunteers. You can contribute as much or as little time as you have available. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-2--create-an-evidence-rating" class="learn-more-link" target="_blank">Learn about the investigative track →</a></p>
                 </div>
             </div>
 
@@ -647,7 +866,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes. The FBI specifically says that victims or witnesses of hate crimes can report them directly to the FBI, and reports can be made anonymously. The FBI reviews each report and investigates when warranted. The DOJ says it receives thousands of complaints from citizens each year.</p>
+                    <p>Yes. The FBI specifically says that victims or witnesses of hate crimes can report them directly to the FBI, and reports can be made anonymously. The FBI reviews each report and investigates when warranted. The DOJ says it receives thousands of complaints from citizens each year. <a href="https://www.fbi.gov/investigate/civil-rights/hate-crimes" class="learn-more-link" target="_blank">See FBI's official guidance →</a></p>
                 </div>
             </div>
 
@@ -657,7 +876,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>The FBI and DOJ review the report to determine whether federal civil-rights violations or hate crimes may have occurred. If so, they can initiate an investigation. We also aggregate reports to show federal authorities that there may be systemic patterns requiring broader investigation.</p>
+                    <p>The FBI and DOJ review the report to determine whether federal civil-rights violations or hate crimes may have occurred. If so, they can initiate an investigation. We also aggregate reports to show federal authorities that there may be systemic patterns requiring broader investigation. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-5--doj-civil-rights-division" class="learn-more-link" target="_blank">Learn about DOJ review process →</a></p>
                 </div>
             </div>
 
@@ -667,7 +886,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Family protection is our highest priority. We never publish private information without consent, we work exclusively with families through a dedicated Family Liaison, and families can approve or disapprove any public statements about their case. Families always come first.</p>
+                    <p>Family protection is our highest priority. We never publish private information without consent, we work exclusively with families through a dedicated Family Liaison, and families can approve or disapprove any public statements about their case. Families always come first. <a href="https://github.com/flixpear/Blacktree/blob/main/README.md#phase-12--family-protection" class="learn-more-link" target="_blank">Read family protection protocol →</a></p>
                 </div>
             </div>
 
@@ -677,17 +896,27 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes. Both the FBI and DOJ allow anonymous reports. You don't need to provide your name or contact information. The focus is on the facts of the case, not on who is reporting it.</p>
+                    <p>Yes. Both the FBI and DOJ allow anonymous reports. You don't need to provide your name or contact information. The focus is on the facts of the case, not on who is reporting it. <a href="https://tips.fbi.gov/home" class="learn-more-link" target="_blank">Submit anonymous FBI tip →</a></p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>What if my state isn't listed yet?</span>
+                    <span>How do I submit or view community petitions?</span>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>We're building the database nationwide. If you know of a suspicious death in your state, you can report it directly to the FBI and DOJ without waiting for our database to expand. You can also contact us to get involved in building the evidence base for your state.</p>
+                    <p>Visit our <a href="https://github.com/flixpear/Blacktree/blob/main/PETITIONS_DATABASE.md" class="learn-more-link" target="_blank">Petitions Database</a> to view the top petitions and learn how to submit your own. We consolidate signatures across petitions to maximize federal pressure—one unified voice with massive numbers is more powerful than dozens of small petitions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if my state isn't covered yet?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We're building the database nationwide. If you know of a suspicious death in your state, you can report it directly to the FBI and DOJ without waiting for our database to expand. You can also <a href="https://github.com/flixpear/Blacktree/issues/new" class="learn-more-link" target="_blank">submit information via GitHub</a> to help build the evidence base for your state.</p>
                 </div>
             </div>
         </div>
@@ -701,9 +930,11 @@
             <a href="https://twitter.com" target="_blank">Twitter</a>
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="mailto:contact@blacktreecampaign.org">Email</a>
+            <a href="https://github.com/flixpear/Blacktree" target="_blank">GitHub</a>
         </div>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Contact: <a href="mailto:contact@blacktreecampaign.org" style="color: #4CAF50;">contact@blacktreecampaign.org</a></p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            <a href="https://github.com/flixpear/Blacktree" style="color: #4CAF50; text-decoration: none;">View Campaign Repository →</a>
+        </p>
     </footer>
 
     <!-- FAQ Toggle Script -->
