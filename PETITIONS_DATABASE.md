@@ -8,9 +8,9 @@
 
 ## 📊 ACTIVE PETITIONS (Updated in Real-Time)
 
-### Top Petitions (Top 3 by Signatures)
+### Top Petitions (Ranked by Signatures)
 
-| Rank | Petition Title | Platform | Signatures | Link | Submitted | Status |
+| Rank | Petition Title | Platform | Signatures | Link | Date Added | Status |
 |------|---|---|---|---|---|---|
 | 1 | [Your First Petition Here] | Change.org | 0 | [Link] | YYYY-MM-DD | Active |
 | 2 | [Your Second Petition Here] | MoveOn | 0 | [Link] | YYYY-MM-DD | Active |
@@ -18,135 +18,109 @@
 
 ---
 
-## HOW TO ADD YOUR PETITION
+## HOW TO SUBMIT YOUR PETITION
 
-**Step 1:** Create a petition on Change.org or MoveOn.org demanding federal review
+**Step 1:** Create a petition on **Change.org** or **MoveOn.org** demanding federal review
 
-**Step 2:** Fill out the submission form at: [blacktreecampaign-petition-form]
+**Step 2:** Share your petition link via GitHub
 
-**Step 3:** Include:
-- Petition title
-- Direct link to petition
-- Current signature count
-- Platform (Change.org / MoveOn / Other)
-- Your contact email (optional, for verification)
+**Three ways to submit:**
 
-**Step 4:** Our system will:
-- Verify the petition link
-- Track signature count
-- Display top 3 petitions on the main website
-- Archive petitions with low signature counts
-- Update rankings daily
+### ✅ **Option 1: GitHub Issue (Easiest)**
+1. Go to: https://github.com/flixpear/Blacktree/issues/new
+2. Title: `[PETITION] Your Petition Title`
+3. Paste:
+   ```
+   **Petition Title:** [Your title]
+   **Platform:** Change.org / MoveOn.org
+   **Link:** [Your petition URL]
+   **Current Signatures:** [Number]
+   ```
+4. Click "Submit new issue"
+5. Done! Community will review and add to database
+
+### ✅ **Option 2: Pull Request (For Experienced GitHub Users)**
+1. Fork the repo
+2. Edit this file directly
+3. Add your petition to the table
+4. Submit a pull request
+
+### ✅ **Option 3: Discussion**
+1. Start a GitHub Discussion suggesting a new petition
+2. Community reviews and votes
 
 ---
 
-## RULES FOR THIS DATABASE
+## RULES FOR PETITIONS
 
 ✅ **ACCEPTED:**
 - Petitions demanding federal review of Black American deaths
 - Petitions requesting DOJ/FBI investigation
 - Petitions for evidence preservation
-- Petitions for pattern investigations
 - Petitions requesting congressional oversight
+- Petitions for pattern investigations
 
 ❌ **NOT ACCEPTED:**
 - Duplicate petitions (consolidate instead)
-- Petitions below 100 signatures (archived after 30 days)
-- Petitions not related to federal review/investigation
+- Petitions below 100 signatures after 30 days (archived)
+- Petitions unrelated to campaign mission
 - Hateful or discriminatory content
-
----
-
-## ARCHIVE (Low Signature Petitions)
-
-Petitions with fewer than 100 signatures are moved here after 30 days of inactivity.
-
-| Petition Title | Signatures | Link | Last Updated |
-|---|---|---|---|
-| [Archived] | 0 | [Link] | YYYY-MM-DD |
-
----
-
-## SUBMISSION FORM
-
-**To submit a petition, fill out this form:**
-
-```
-PETITION SUBMISSION FORM
-========================
-
-Petition Title:
-[Enter title of your petition]
-
-Petition Link:
-[Paste full URL to petition]
-
-Current Signatures:
-[Enter current signature count - this should be verified]
-
-Platform:
-☐ Change.org
-☐ MoveOn.org
-☐ Other: [specify]
-
-Description (optional):
-[Brief description of what the petition demands]
-
-Your Email (optional):
-[For verification purposes only]
-
-Submitted By:
-[Your name or organization]
-
-Date Submitted:
-[YYYY-MM-DD]
-```
-
-**Submit this form via:**
-1. Email: contact@blacktreecampaign.org
-2. GitHub Issue: Create a new issue in the Blacktree repo with this form
-3. Pull Request: Submit a PR directly updating this file
 
 ---
 
 ## HOW OUR SYSTEM WORKS
 
-### ⚙️ Automated Process
+### ⚙️ Community Process
 
-1. **Daily Check:** System verifies petition links and signature counts
-2. **Ranking:** Petitions ranked by signature count (highest first)
-3. **Top 3 Display:** Top 3 petitions shown on campaign website
-4. **Archival:** Petitions under 100 signatures archived after 30 days
-5. **Updates:** Website displays updated counts daily
+1. **Submit:** You create petition + share link via GitHub Issue
+2. **Verify:** Community members verify petition legitimacy
+3. **Track:** Signature counts updated as community reports them
+4. **Rank:** Petitions ranked by signature count (highest = top)
+5. **Display:** Top 3 appear on campaign website
+6. **Archive:** Petitions under 100 signatures archived after 30 days
+7. **Amplify:** Strongest petitions get maximum visibility & pressure
 
-### 🤝 Community Moderation
+### 🔄 Real-Time Updates
 
-- Community members verify petitions are legitimate
-- Flag duplicates or inappropriate content
-- Update signature counts if automated detection fails
-- Suggest consolidation of similar petitions
+- Signature counts updated by community members
+- Anyone can report updated numbers via GitHub Issues
+- Changes tracked transparently in GitHub history
+- No delays, no gatekeeping
+
+---
+
+## ARCHIVE (Low Signature Petitions)
+
+Petitions with fewer than 100 signatures are moved here after 30 days.
+
+| Petition Title | Signatures | Date Archived |
+|---|---|---|
+| [None yet] | 0 | YYYY-MM-DD |
 
 ---
 
 ## FAQ - PETITIONS
 
-**Q: Can I create my own petition instead of signing existing ones?**
-A: Yes! Create your petition on Change.org or MoveOn.org, then submit the link here. If it gains traction (100+ signatures), it will appear on our website.
+**Q: Why do I have to use GitHub?**
+A: GitHub keeps everything transparent, community-moderated, and decentralized. No single person managing emails. Anyone can verify, track, and update petitions.
+
+**Q: Can I create my own petition?**
+A: Yes! Create on Change.org or MoveOn.org, then submit your link via GitHub Issue. If it gains 100+ signatures, it appears on our website.
 
 **Q: How often are signature counts updated?**
-A: Daily. The system checks each petition link and updates counts automatically.
+A: As community members report them via GitHub. Updates are transparent and tracked in real-time.
 
-**Q: What happens if my petition doesn't reach top 3?**
-A: It remains in the active database. If you reach 100+ signatures, you'll appear on the website. Focus on sharing your petition link widely.
+**Q: What if my petition doesn't reach top 3?**
+A: It stays active. Focus on sharing your link widely. Reach 100+ signatures to appear on the website.
 
 **Q: Can I edit my petition after submitting?**
-A: Yes. Just resubmit with updated information, or reply to your original submission.
+A: Yes. Create a new GitHub Issue with updated information, and community will update the database.
 
 **Q: How long before petitions are archived?**
-A: Petitions under 100 signatures are archived after 30 days of no activity.
+A: 30 days of inactivity with fewer than 100 signatures.
 
-**Q: Can petitions be removed?**
-A: Only if they violate our rules (duplicates, off-topic, hateful content). Otherwise, they remain visible.
+**Q: What happens to archived petitions?**
+A: They remain visible in the archive. Community can revive them if signatures grow.
 
 ---
 
@@ -155,40 +129,42 @@ A: Only if they violate our rules (duplicates, off-topic, hateful content). Othe
 - **Total Petitions Submitted:** 0
 - **Top Petition Signatures:** 0
 - **Combined Signatures (Top 3):** 0
-- **Last Updated:** [Auto-updated daily]
+- **Last Updated:** [Check GitHub Issues for latest updates]
 
 ---
 
-## IMPORTANT NOTES
+## WHY THIS MATTERS
 
-🔴 **This database is meant to:**
-- Consolidate community petitions into a unified list
-- Show federal authorities that there is massive public demand for investigation
-- Reduce fragmentation of signatures across multiple petitions
-- Create visible momentum for federal action
+🔴 **Federal agencies see:**
+- One unified campaign
+- Consolidated petition pressure
+- Real public demand for investigation
+- Not dozens of fragmented efforts
 
-🟦 **What the FBI/DOJ see:**
-- One coordinated campaign with consolidated signature pressure
-- Not dozens of small, isolated petitions
-- Real public demand for federal review
-
----
-
-## TRANSPARENCY
-
-This file is open-source and community-maintained. Anyone can:
-- View the full petition database
-- Suggest edits via GitHub Issues
-- Submit new petitions
-- Track changes over time
-
-**GitHub Transparency:**
-- All submissions are logged
-- All changes are tracked
-- Anyone can audit the database
-- No hidden deletions
+🟦 **What you get:**
+- Your voice amplified with thousands of others
+- Transparent, community-driven process
+- Maximum impact on federal authorities
+- Democratic decision-making
 
 ---
 
-**For questions, submit a GitHub Issue or email: contact@blacktreecampaign.org**
+## SUBMIT YOUR PETITION NOW
+
+👉 **[Create a GitHub Issue to Submit Your Petition](https://github.com/flixpear/Blacktree/issues/new)**
+
+**Format:**
+```
+Title: [PETITION] Your Petition Title Here
+
+Your petition link:
+Platform:
+Current signatures:
+```
+
+That's it. Community takes it from there.
+
+---
+
+**Questions?** [Create a GitHub Discussion](https://github.com/flixpear/Blacktree/discussions)
 
