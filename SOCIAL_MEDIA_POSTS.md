@@ -81,7 +81,7 @@ Every signature matters.
 ---
 
 ## Post 6: Partner Organizations
-🤝 **We're working with civil-rights leaders.**
+🤝 **Team up working with civil-rights leaders.**
 
 If you're a family seeking justice, our partners include:
 • NAACP Legal Defense Fund
