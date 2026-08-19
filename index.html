@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blacktree Campaign - Demanding Federal Review of Suspicious Deaths</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header/Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 2rem 0;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a1a2e;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Two Tracks Section */
+        .tracks {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .tracks-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tracks h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .track-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .track-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .track-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .track-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+
+        .track-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .track-details {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-left: 4px solid #4CAF50;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Three Pillars */
+        .pillars {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .pillars-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillars h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar {
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .pillar:hover {
+            border-color: #4CAF50;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+        }
+
+        .pillar-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+
+        /* Take Action Section */
+        .take-action {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .action-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .take-action h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .action-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .action-card:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .action-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .action-card p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .action-link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .action-link:hover {
+            opacity: 0.7;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #f9f9f9;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #efefef;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            color: #666;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .tracks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">🖤 Blacktree Campaign</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tracks">Get Involved</a></li>
+                <li><a href="#action">Take Action</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>You Don't Have to Prove It.<br>You Have to Report It.</h1>
+            <p>Demanding independent federal review of suspicious and disputed deaths involving Black Americans</p>
+            <p style="font-size: 1rem; opacity: 0.85;">We're not asking ordinary citizens to determine whether something legally qualifies as a lynching or hate crime. We're asking them to say: "Something about this case deserves federal review."</p>
+            
+            <div class="tagline">Federal authorities will investigate. That's their job.</div>
+
+            <div class="cta-buttons">
+                <a href="#tracks" class="btn btn-primary">Get Involved</a>
+                <a href="#action" class="btn btn-secondary">Take Action Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Tracks Section -->
+    <section class="tracks" id="tracks">
+        <div class="tracks-container">
+            <h2>Two Ways to Help</h2>
+            <div class="tracks-grid">
+                <!-- Fast Track -->
+                <div class="track-card">
+                    <div class="track-icon">🟢</div>
+                    <h3>Fast Track: "Report It"</h3>
+                    <p><strong>For busy people who want to make an immediate impact</strong></p>
+                    <p>10–30 minutes. Report suspected cases directly to federal authorities.</p>
+                    <div class="track-details">
+                        <strong>What you do:</strong>
+                        <ul style="margin-left: 1rem; margin-top: 0.5rem;">
+                            <li>Report to FBI Tip Line</li>
+                            <li>Report to DOJ Civil Rights</li>
+                            <li>Done</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #4CAF50;"><strong>Federal investigators will determine what action is warranted.</strong></p>
+                </div>
+
+                <!-- Investigative Track -->
+                <div class="track-card">
+                    <div class="track-icon">🔵</div>
+                    <h3>Investigative Track: "Help Build the Case"</h3>
+                    <p><strong>For people willing to do deeper research</strong></p>
+                    <p>Help document cases, gather evidence, and support families.</p>
+                    <div class="track-details">
+                        <strong>What you do:</strong>
+                        <ul style="margin-left: 1rem; margin-top: 0.5rem;">
+                            <li>Research cases & gather documents</li>
+                            <li>File FOIA/public records requests</li>
+                            <li>Support family interviews</li>
+                            <li>Build the evidence base</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #4CAF50;"><strong>Your work becomes federal referrals and congressional pressure.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Pillars -->
+    <section class="pillars">
+        <div class="pillars-container">
+            <h2>Our Three Demands</h2>
+            <div class="pillars-grid">
+                <div class="pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Independent Federal Review</h3>
+                    <p>Federal review of documented cases where credible questions exist regarding official determinations.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Evidence Preservation</h3>
+                    <p>Preservation and appropriate examination of investigative, forensic, and digital evidence.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Pattern Investigation</h3>
+                    <p>Federal evaluation of whether multiple cases reveal systemic patterns of inadequate investigation or discrimination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Section -->
+    <section class="take-action" id="action">
+        <div class="action-container">
+            <h2>Take Action Now</h2>
+            <div class="action-grid">
+                <!-- FBI -->
+                <div class="action-card">
+                    <h3>🔴 Report to FBI</h3>
+                    <p><strong>FBI Hate Crime Reporting</strong></p>
+                    <p>Phone: 1-800-CALL-FBI (1-800-225-5324)</p>
+                    <a href="https://tips.fbi.gov/home" class="action-link" target="_blank">Submit FBI Tip →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">The FBI specifically investigates hate crimes and civil-rights violations.</p>
+                </div>
+
+                <!-- DOJ -->
+                <div class="action-card">
+                    <h3>🟦 Report to DOJ</h3>
+                    <p><strong>DOJ Civil Rights Division</strong></p>
+                    <p>Online reporting portal and investigation program</p>
+                    <a href="https://civilrights.justice.gov/report/" class="action-link" target="_blank">Report Civil Rights Violation →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">DOJ has authority for pattern-or-practice investigations.</p>
+                </div>
+
+                <!-- Congress -->
+                <div class="action-card">
+                    <h3>📞 Contact Congress</h3>
+                    <p><strong>Congressional Pressure Works</strong></p>
+                    <p>Contact your representatives and ask them to request DOJ/FBI review.</p>
+                    <a href="#" class="action-link">Find Your Representative →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Congressional offices respond to documented constituent requests.</p>
+                </div>
+
+                <!-- Sign Petition -->
+                <div class="action-card">
+                    <h3>✍️ Sign the Petition</h3>
+                    <p><strong>Demand Federal Review</strong></p>
+                    <p>Add your voice to the growing movement for accountability.</p>
+                    <a href="#" class="action-link">Sign Petition →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Every signature strengthens the call for federal investigation.</p>
+                </div>
+
+                <!-- Volunteer -->
+                <div class="action-card">
+                    <h3>🤝 Become a Researcher</h3>
+                    <p><strong>Help Build the Case</strong></p>
+                    <p>Research cases, gather public records, support documentation.</p>
+                    <a href="#" class="action-link">Join Our Team →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">No special background needed—training provided.</p>
+                </div>
+
+                <!-- Civil Rights -->
+                <div class="action-card">
+                    <h3>⚖️ Seek Legal Help</h3>
+                    <p><strong>Civil Rights Organizations</strong></p>
+                    <p>NAACP LDF, ACLU, SPLC, and wrongful death attorneys.</p>
+                    <a href="#" class="action-link">Get Legal Assistance →</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Free and low-cost legal support available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What exactly is the Blacktree Campaign?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The Blacktree Campaign is a citizen-led effort demanding independent federal review of suspicious and disputed deaths involving Black Americans. We work with families, federal agencies, civil-rights organizations, and Congress to ensure thorough investigation of cases where credible questions exist about official determinations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do I have to prove it was a lynching to report a case?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. We're not asking you to determine legal classifications. We're simply asking: "Does this case deserve federal review?" If you see a suspicious death involving a Black American, report the facts to the FBI and DOJ. Federal investigators will determine whether civil-rights violations, hate crimes, or other federal crimes occurred.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does the Fast Track take?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>10–30 minutes. You gather the basic facts about the case, file a report with the FBI tip line, and file a report with the DOJ Civil Rights Division. That's it. You don't need to do additional research or investigation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I want to do more than report a case?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Join the Investigative Track. You can help research cases, gather public records through FOIA requests, conduct family interviews, and build the evidence base. We provide training and support for volunteers. You can contribute as much or as little time as you have available.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Does the FBI actually investigate reports from citizens?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. The FBI specifically says that victims or witnesses of hate crimes can report them directly to the FBI, and reports can be made anonymously. The FBI reviews each report and investigates when warranted. The DOJ says it receives thousands of complaints from citizens each year.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What happens after I report a case?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The FBI and DOJ review the report to determine whether federal civil-rights violations or hate crimes may have occurred. If so, they can initiate an investigation. We also aggregate reports to show federal authorities that there may be systemic patterns requiring broader investigation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does the campaign protect family privacy?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Family protection is our highest priority. We never publish private information without consent, we work exclusively with families through a dedicated Family Liaison, and families can approve or disapprove any public statements about their case. Families always come first.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I report anonymously?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. Both the FBI and DOJ allow anonymous reports. You don't need to provide your name or contact information. The focus is on the facts of the case, not on who is reporting it.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if my state isn't listed yet?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We're building the database nationwide. If you know of a suspicious death in your state, you can report it directly to the FBI and DOJ without waiting for our database to expand. You can also contact us to get involved in building the evidence base for your state.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Blacktree Campaign. Demanding federal review of suspicious and disputed deaths involving Black Americans.</p>
+        <p>"You Don't Have to Prove It. You Have to Report It."</p>
+        <div class="social-links">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="mailto:contact@blacktreecampaign.org">Email</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Contact: <a href="mailto:contact@blacktreecampaign.org" style="color: #4CAF50;">contact@blacktreecampaign.org</a></p>
+    </footer>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
